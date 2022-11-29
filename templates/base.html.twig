@@ -1,0 +1,11 @@
+{% include 'header/header.html.twig' %}
+
+<body style="font-family: 'Lato', sans-serif;background: #e2e2e2;">
+
+{% block body %}{% endblock %}
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+</body>
+
+{% include 'footer/footer.html.twig'%}

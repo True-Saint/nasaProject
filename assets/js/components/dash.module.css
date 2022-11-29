@@ -1,0 +1,108 @@
+.DashMain{
+
+    width: 100%;
+    height: 90vh;
+
+    display: flex;
+}
+
+.apodSection{
+    height: 100%;
+    max-width: 100vw;
+}
+.ControlPanelButtons:hover{
+    background-color: #9cd5ec;
+
+    text-shadow: -4px 0px 15px rgba(0, 255, 255, 1);
+    font-weight: bolder;
+    width: 220px;
+    transition: width 100ms ease-in-out;
+}
+.ControlPanelButtons{
+    background-color: #9ab0c7;
+    color: #0a0a0a;
+    width: 180px;
+    height: 45px;
+    border: 1px solid #ffffdd;
+    position: relative;
+    z-index: 99;
+}
+.buttonSection{
+    padding-top: 20px;
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+.ControlPanel{
+    width: 15vw;
+    min-height: 1000px;
+    height: 100%;
+    background-color: #1769bd;
+    position: relative;
+    z-index: 2;
+}
+
+.MainContent{
+    background-color: #000644;
+    min-height: 1000px;
+    width: 85vw;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.fa-spin {
+    margin: 0 auto;
+}
+
+.loading{
+    text-align: center;
+    margin: 0 auto;
+}
+.loadingSection{
+    background-color: rgba(110, 110, 110, 0.43);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinnerLoad{
+    width: 150px;
+    height: 150px;
+    animation-name: spin;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.textGlow{
+    color: #cbcbcb;
+    font-size: 16px;
+    animation-name: glow;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    0%{
+        text-shadow: -4px 0px 15px rgba(0, 255, 255, 0);
+    }
+    50% {
+        text-shadow: -4px 0px 15px rgba(0, 255, 255, 1);
+    }
+    100%{
+        text-shadow: -4px 0px 15px rgba(0, 255, 255, 0);
+    }
+}

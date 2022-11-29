@@ -1,0 +1,10 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+index:
+    path: /
+    controller: App\Controller\HomeController::index
+
+api_login_check:
+    path: /api/auth/login_check

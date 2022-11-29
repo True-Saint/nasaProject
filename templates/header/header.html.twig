@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+        {{ encore_entry_link_tags('auth') }}
+        {{ encore_entry_link_tags('home') }}
+    {% endblock %}
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<nav>
+    <ul>
+        <li><a href="{{ path('home') }}">Home</a></li>
+        <li><a href="{{ path('Nasa') }}">NASA</a></li>
+        <li><a href="{{ path('default') }}">default</a></li>
+        <li><a href="{{ path('login') }}">Login</a></li>
+       {# <li><a href="{{ path('easyadmin') }}">Admin</a></li>#}
+    </ul>
+    <div id="Dash">
+
+    </div>
+</nav>

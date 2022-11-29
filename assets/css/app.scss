@@ -1,0 +1,29 @@
+nav{
+  text-align: center;
+  height: 100px;
+  background: #283CF5;
+  width: 100%;
+  ul{
+justify-content: center;
+    li{
+      font-size: 18px;
+      color: white;
+      display: inline;
+    }
+
+  }
+}
+
+input {
+  border: solid lightgrey 1px;
+  padding: 8px;
+}
+
+label {
+  display: inline-block;
+  min-width: 150px;
+}
+
+button {
+  padding: 6px 12px;
+}

@@ -1,0 +1,55 @@
+
+.epicCardSection{
+    background-color: #191919;
+
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.slide{
+
+}
+.lmao{
+    display: block;
+}
+.epic{
+    overflow-y: hidden;
+}
+
+.epicCard{
+    min-width: 400px;
+    min-height: 400px;
+    max-width: 400px;
+
+    height: 100%;
+    flex: 1 1 400px;
+    margin: 1vw;
+    border: 1px solid black;
+    background: #f6f6f6;
+}
+
+.heroEpicSection{
+    width: 100%;
+    text-align: center;
+    background-color: #191919;
+
+}
+.heroEpicImage{
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+}
+.heroEpicImage>img{
+    width: 100%;
+    height: 100%;
+}
+.epicImgFull{
+    width: 100%;
+    height: 100%;
+}
+.epicImgThumb{
+    width: 100%;
+    height: 100%;
+}
