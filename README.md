@@ -7,6 +7,7 @@ It is a work in progress. Everything needs refining. CSS will be very basic in t
 ## Requrements
 ```
 PHP 8.1
+mysql 5.7 (might work with other databases but this is untested)
 ```
 
 ## Installation
@@ -31,6 +32,12 @@ APOD: Astronomy Picture Of the Day
 Epic: Earth Polychromatic Imaging Camera
 
 New Media: Displays images and videos taken at Nasa
+
+Sync APOD will save APOD data to the database
+
+Sync Mars Weather will save weather data tp the database
+
+Admin does not require a login. You can see APOD images that you have saved
 
 ## Non-Functional Modules
 Media: To be removed

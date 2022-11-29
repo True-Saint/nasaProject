@@ -5,7 +5,7 @@ import Apod from './apod/Apod';
 import MarsWeather from './marsWeather/MarsWeather.js';
 import logo from './React-icon.svg';
 import styles from './dash.module.css';
-import apod from "./APOD";
+
 import NasaMedia from "./nasaMedia/nasaMedia";
 import Media from "./media/media";
 
@@ -30,9 +30,8 @@ class Home extends Component {
             case 'marsWeather':
                 return <MarsWeather></MarsWeather>;
             case 'media':
-                return (<NasaMedia></NasaMedia>);
-            case 'media1':
                 return (<Media></Media>);
+
             default:
                 return <Apod></Apod>;
         }
@@ -68,15 +67,15 @@ class Home extends Component {
                             name={'media'}
                             className={styles.ControlPanelButtons}
                             onClick={e => this.nameChangedHandler(e.target.name)}
-                        >Media</button>
+                        >Nasa Media</button>
                     </div>
                     <div className={styles.buttonSection}>
                         <button
-                            name={'media1'}
+                            name={'New'}
                             disabled={this.state.loading}
                             className={styles.ControlPanelButtons}
                             onClick={e => this.nameChangedHandler(e.target.name)}
-                        >New Media</button>
+                        >-</button>
                     </div>
                     <div className={styles.buttonSection}>
                         <button   name={'marsWeather'}className={styles.ControlPanelButtons} onClick={e => this.nameChangedHandler(e.target.name)}>Mars Weather</button>
