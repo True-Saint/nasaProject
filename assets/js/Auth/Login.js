@@ -17,10 +17,13 @@ class Login extends Component {
     passwordChangeHandler = (event) => {
         this.setState({password: event.target.value});
     }
+
     login(username,password) {
-        axios.post(`https://localhost:8000/api/auth/login_check`, {username: username, password: password}).then(response =>{
+        axios.post(`https://localhost:8000/api/auth/login_check`, {username: username, password: password})
+            .then(response =>{
             localStorage.setItem('token',response.data.token);
-            this.setState({token: response.data.token});
+
+          //  this.setState({token: response.data.token});
         })
 
     }

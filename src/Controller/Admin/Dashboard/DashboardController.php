@@ -18,6 +18,7 @@ class DashboardController extends AbstractDashboardController
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
+
        // return parent::index();
         $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
         return $this->redirect($adminUrlGenerator->setController(ApodArchiveCrudController::class)->generateUrl());
@@ -43,6 +44,8 @@ class DashboardController extends AbstractDashboardController
         return Dashboard::new()
             ->setTitle('Nasa');
     }
+
+
 
     public function configureMenuItems(): iterable
     {

@@ -6,16 +6,35 @@ namespace App\Controller;
 use App\Entity\ApodArchive;
 use App\Entity\MarsWeather;
 use Doctrine\Persistence\ManagerRegistry;
+use Lexik\Bundle\JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag;
+use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
 use DateTime;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+
 class NasaController extends AbstractController
 {
+    public function __construct(TokenStorageInterface $tokenStorageInterface, JWTTokenManagerInterface $jwtManager)
+    {
+        $this->jwtManager = $jwtManager;
+        $this->tokenStorageInterface = $tokenStorageInterface;
+    }
+
+    /**
+     * @Route("/auth", name="auth")
+     */
+    public function authenticateToken( ){
+
+
+    }
 
     /**
      * @Route("/Nasa", name="Nasa")
@@ -272,6 +291,7 @@ class NasaController extends AbstractController
         return new Response("File saved:");
 
     }
+
 
     private function file_get_contents_curl($url) {
         $ch = curl_init();
