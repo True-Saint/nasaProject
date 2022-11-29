@@ -13,6 +13,10 @@ PHP 8.1
 
 Use the package manager [composer](https://getcomposer.org) to install php dependencies.
 Use the package manager [yarn](https://yarnpkg.com) to install js dependencies 
+
+Regiser for an API Key on [Nasa's website](https://api.nasa.gov)
+
+Paste the Key in .env under NASA_API_KEY
 ```
 composer install
 yarn install
