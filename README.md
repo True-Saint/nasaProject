@@ -18,11 +18,30 @@ Use the package manager [yarn](https://yarnpkg.com) to install js dependencies
 Regiser for an API Key on [Nasa's website](https://api.nasa.gov)
 
 Paste the Key in .env under NASA_API_KEY
+
+Specify a new database in .env under DATABASE_URL. It is possible to use an existing database, but it should be empty
+
+
+Run the following commands to install dependencies
 ```
 composer install
 yarn install
 yarn build
 ```
+
+Create new Database. If one already exists, this command can be skipped.
+```
+php bin/console doctrine:database:create
+```
+Update the database tables
+```
+php bin/console doctrine:schema:update --force
+```
+create admin users. *This command will purge the database
+```
+php bin/console doctrine:fixtures:load
+```
+
 
 ## (kinda) Working  Modules
 So far, there is very basic functionality that simply displays data from the Nasa api.
