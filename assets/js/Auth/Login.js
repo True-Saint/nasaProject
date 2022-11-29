@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import LoginComponent from './loginComponent';
+import LoginComponent from './components/loginComponent';
 
 class Login extends Component {
     constructor(props) {
@@ -28,7 +28,6 @@ class Login extends Component {
     render() {
         let username = this.state.username;
         let password = this.state.password;
-
 
         return(
             <form className="form-signin form-group" encType="">
