@@ -3,6 +3,7 @@ import {Routes, Route,Navigate, Link, withRouter} from 'react-router-dom';
 import Epic from './epic/Epic';
 import Apod from './apod/Apod';
 import MarsWeather from './marsWeather/MarsWeather.js';
+import MarsRover from './Mars Rover/MarsRover';
 import logo from './React-icon.svg';
 import styles from './dash.module.css';
 
@@ -31,7 +32,8 @@ class Home extends Component {
                 return <MarsWeather></MarsWeather>;
             case 'media':
                 return (<Media></Media>);
-
+            case 'marsRover':
+                return (<MarsRover></MarsRover>)
             default:
                 return <Apod></Apod>;
         }
@@ -71,11 +73,11 @@ class Home extends Component {
                     </div>
                     <div className={styles.buttonSection}>
                         <button
-                            name={'New'}
+                            name={'marsRover'}
                             disabled={this.state.loading}
                             className={styles.ControlPanelButtons}
                             onClick={e => this.nameChangedHandler(e.target.name)}
-                        >-</button>
+                        >Mars Rover</button>
                     </div>
                     <div className={styles.buttonSection}>
                         <button   name={'marsWeather'}className={styles.ControlPanelButtons} onClick={e => this.nameChangedHandler(e.target.name)}>Mars Weather</button>

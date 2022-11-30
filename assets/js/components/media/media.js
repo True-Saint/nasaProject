@@ -31,7 +31,7 @@ class Media extends Component{
 
             },
             page: 1,
-            year: 2020,
+            year: 2022,
             loading: true
         };
     }

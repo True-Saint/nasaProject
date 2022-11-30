@@ -51,6 +51,7 @@ class NasaController extends AbstractController
 
     }
 
+
     /**
      * @Route("api/apod", name="apodApi")
      * @return \Symfony\Component\HttpFoundation\JsonResponse
@@ -272,6 +273,20 @@ class NasaController extends AbstractController
 
             copy($source, $destination);    // download and copy the image
         }
+    }
+
+
+    /**
+     * @Route("api/marsrover", name="MarsRover")
+     */
+    public function marsRover()
+    {
+
+        $key = $this->getParameter('nasa_api_key');
+
+        return new JsonResponse($key);
+
+
     }
 
     /**

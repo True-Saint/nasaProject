@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import logo from '../React-icon.svg';
 import MarsWeatherData from './MarsWeatherData';
+import styles from "../dash.module.css";
 
 class MarsWeather extends Component{
 
@@ -109,10 +110,10 @@ class MarsWeather extends Component{
         }else {
 
             return(
-                <div className='loadingSection'>
-                    <div className='loading'>
-                        <img src={logo} className="spinnerLoad" alt="logo" />
-                        <small>Loading Component...</small>
+                <div className={styles.loadingSection}>
+                    <div className={styles.loading}>
+                        <img src={logo} className={styles.spinnerLoad} alt="logo" />
+                        <small className={styles.textGlow}>Loading Component...</small>
                     </div>
                 </div>
             )

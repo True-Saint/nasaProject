@@ -13,6 +13,7 @@ mysql 5.7 (might work with other databases but this is untested)
 ## Installation
 
 Use the package manager [composer](https://getcomposer.org) to install php dependencies.
+
 Use the package manager [yarn](https://yarnpkg.com) to install js dependencies 
 
 Regiser for an API Key on [Nasa's website](https://api.nasa.gov)
@@ -50,7 +51,9 @@ APOD: Astronomy Picture Of the Day
 
 Epic: Earth Polychromatic Imaging Camera
 
-New Media: Displays images and videos taken at Nasa
+Nasa Media: Displays images and videos taken at Nasa
+
+Mars Rover: displays images from the Mars rovers (Curiosity,Opportunity, Spirit)
 
 Sync APOD will save APOD data to the database
 

@@ -1,0 +1,18 @@
+.marsRoverImageContainer{
+    height: 100%;
+    width: 500px;
+    margin: 25px;
+    padding: 25px;
+    border: #0a0a0a 4px solid;
+    background: #8a9fbe;
+}
+.mrimage{
+    height: 400px;
+    width: 400px;
+}
+
+.mrOuterContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
