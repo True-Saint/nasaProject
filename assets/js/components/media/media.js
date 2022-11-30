@@ -177,7 +177,6 @@ class Media extends Component{
                 if(!data){
                   return null;
                 }else {
-                    {console.log(data)}
                     return (
                             <div key={index+1} ref={'image'+index+1} className={styles.nasaImageContainer} id={index+1}>
                                 {data.links ?
@@ -225,8 +224,8 @@ class Media extends Component{
                                 <option value="2018">2018</option>
                                 <option value="2019">2019</option>
                                 <option value="2020">2020</option>
-                                <option value="2020">2021</option>
-                                <option value="2020">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
                             </select>
                             <div>
                                 <button onClick={e => this.prevPage(e)}>Prev</button>

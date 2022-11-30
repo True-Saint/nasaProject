@@ -52,6 +52,7 @@ select#year{
 .nasaMediaSection{
     overflow-y: scroll;
     max-height: 1200px;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
