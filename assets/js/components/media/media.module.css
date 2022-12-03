@@ -10,6 +10,7 @@
 .year{
     height: min-content;
 }
+
 .nasaImageContainer{
     height: 150px;
     flex: 1 1 150px;

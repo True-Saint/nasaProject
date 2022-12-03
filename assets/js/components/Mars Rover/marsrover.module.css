@@ -1,19 +1,74 @@
 .marsRoverImageContainer{
     height: 100%;
-    width: 500px;
+    width: 400px;
     margin: 25px;
     padding: 25px;
     border: #0a0a0a 4px solid;
     background: #8a9fbe;
 }
-.mrimage{
-    height: 400px;
+.controls{
+    border: 2px #000000 solid;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
     width: 400px;
+    justify-content: space-evenly;
+    padding: 25px;
+    position: fixed;
+    background: rgba(95, 197, 245, 0.21);
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
+.controls:hover{
+    background: #5fc5f5;
+}
+
+.controls:focus{
+    background: #5fc5f5;
+}
+
+.mrimage{
+    height: 350px;
+    width: 350px;
+}
+.selector{
+    height: 50px;
+}
 .mrOuterContainer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 
+}
+.close{
+    border: 2px #000000 solid;
+    height: 25px;
+    top: 0;
+    text-decoration: none;
+    position: relative;
+    background-color: #37a8ff;
+}
+a.close{
+    text-decoration: none;
+}
+
+a.show{
+    text-decoration: none;
+}
+
+.show{
+    position: fixed;
+    background-color: rgba(55, 168, 255, 0.17);
+    width: 200px;
+    text-align: center;
+    left: 50%;
+    border: 2px #000000 solid;
+    padding: 20px;
+    transform: translate(-50%, 0);
+}
+
+.show:hover{
+    background-color: #37a8ff;
 }

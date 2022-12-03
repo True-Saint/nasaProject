@@ -43,7 +43,7 @@
 
 .MainContent{
     background-color: #000644;
-    min-height: 1000px;
+    overflow-y: scroll;
     width: 85vw;
     height: 100%;
     position: relative;

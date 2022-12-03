@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import LoginComponent from './components/loginComponent';
+import Cookies from 'universal-cookie';
 
 class Login extends Component {
     constructor(props) {
@@ -21,7 +22,9 @@ class Login extends Component {
     login(username,password) {
         axios.post(`https://localhost:8000/api/auth/login_check`, {username: username, password: password})
             .then(response =>{
-            localStorage.setItem('token',response.data.token);
+                const cookies = new Cookies();
+
+                cookies.set('token',response.data.token);
 
           //  this.setState({token: response.data.token});
         })

@@ -6,9 +6,6 @@ import logo from "../React-icon.svg";
 import ImageComponent from "./ImageComponent";
 import mediaStyle from "../nasaMedia/nasaMedia.module.css";
 import NasaVideosComponent from "../nasaMedia/nasaVideosComponent";
-import NasaImagesComponent from "../nasaMedia/nasaImagesComponent";
-import previewComponent from "./previewComponent";
-import PreviewComponent from "./previewComponent";
 
 class Media extends Component{
 
@@ -49,7 +46,6 @@ class Media extends Component{
         let year = this.state.year;
         let page = this.state.page;
         let url = `https://images-api.nasa.gov/search?year_start=`+year+`&page=`+page;
-        console.log(url);
         axios.get(url).then(response => {
             this.setState({media: response.data,loading: false});
         });
@@ -143,8 +139,6 @@ class Media extends Component{
                     let media = imagedata.split('/',8);
                     let source = media[5].split('.');
                     let type = media[5].split('~');
-                    console.log(media[3]);
-                    console.log(type[1]);
 
                     if(media[3] === 'video' && source[1] === 'mp4' && type[1] === 'large.mp4'){
                         return <NasaVideosComponent
@@ -167,7 +161,7 @@ class Media extends Component{
                             location={this.state.previewMedia.data.location}
                         ></ImageComponent>
                     }else{
-                        console.log("new media type");
+
                         return null
                     }
                 })
@@ -212,7 +206,7 @@ class Media extends Component{
                 <div className={mediaStyle.nasaMediaSection} id={'mediaSection'} onScroll={this.scrollCheck}>
                     <div className={mediaStyle.dashMain}>
                         <div className={mediaStyle.mainURIControls}>
-                            <select id="year" className={styles.year} onChange={e => this.setYear(e)} defaultValue={'2020'}>
+                            <select id="year" className={styles.year} onChange={e => this.setYear(e)} defaultValue={'2022'}>
                                 <option value="2010">2010</option>
                                 <option value="2011">2011</option>
                                 <option value="2012">2012</option>
