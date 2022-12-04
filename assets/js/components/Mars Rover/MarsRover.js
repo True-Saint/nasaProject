@@ -179,7 +179,7 @@ class MarsRover extends Component {
                             selected={ this.state.startDate }
                             onChange={ this.handleChange }
                             dateFormat="yyyy-MM-dd"
-                            minDate={parseISO(this.state.manifest.photo_manifest.min_date)}
+                            minDate={parseISO(this.state.manifest.photo_manifest.landing_date)}
                             maxDate={parseISO(this.state.manifest.photo_manifest.max_date)}
                         />
                         <select id="rover" className={mrStyles.selector} onChange={e => this.setRover(e)} defaultValue={'curiosity'}>
@@ -188,6 +188,8 @@ class MarsRover extends Component {
                             <option value="spirit">Spirit</option>
                         </select>
                                 {this.selectSwitch()}
+                            <p>Min Date: {this.state.manifest.photo_manifest.landing_date}</p>
+                            <p>Max Date: {this.state.manifest.photo_manifest.max_date}</p>
                     </span>
                         }
 
