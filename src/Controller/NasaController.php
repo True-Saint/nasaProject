@@ -290,6 +290,19 @@ class NasaController extends AbstractController
     }
 
     /**
+     * @Route("api/techtransfer", name="techtransfer")
+     */
+    public function techtransfer()
+    {
+
+        $key = $this->getParameter('nasa_api_key');
+
+        return new JsonResponse($key);
+
+
+    }
+
+    /**
      * @Route("/image/api", name="image")
      */
     public function saveImage(){

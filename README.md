@@ -43,6 +43,7 @@ create admin users. *This command will purge the database
 php bin/console doctrine:fixtures:load
 ```
 
+The server needs to have https enabled. it is better to use localhost rather than 127.0.0.1, otherwise CORS will cause the calls to fail
 
 ## (kinda) Working  Modules
 So far, there is very basic functionality that simply displays data from the Nasa api.

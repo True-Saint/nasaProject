@@ -9,6 +9,7 @@ import styles from './dash.module.css';
 
 import NasaMedia from "./nasaMedia/nasaMedia";
 import Media from "./media/media";
+import Techtransfer from "./techtransfer/techtransfer";
 
 class Home extends Component {
     constructor(props) {
@@ -34,6 +35,8 @@ class Home extends Component {
                 return (<Media></Media>);
             case 'marsRover':
                 return (<MarsRover></MarsRover>)
+            case 'tech transfer':
+                return (<Techtransfer></Techtransfer>)
             default:
                 return <Apod></Apod>;
         }
@@ -78,6 +81,14 @@ class Home extends Component {
                             className={styles.ControlPanelButtons}
                             onClick={e => this.nameChangedHandler(e.target.name)}
                         >Mars Rover</button>
+                    </div>
+                    <div className={styles.buttonSection}>
+                        <button
+                            name={'tech transfer'}
+                            disabled={this.state.loading}
+                            className={styles.ControlPanelButtons}
+                            onClick={e => this.nameChangedHandler(e.target.name)}
+                        >TechTransfer</button>
                     </div>
                     <div className={styles.buttonSection}>
                         <button   name={'marsWeather'}className={styles.ControlPanelButtons} onClick={e => this.nameChangedHandler(e.target.name)}>Mars Weather</button>
