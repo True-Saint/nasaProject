@@ -68,7 +68,10 @@ Media: To be removed
 Mars Weather: InSight: Mars Weather Service. Will display the weather on Mars each day
 
 ## To-Do
-A lot
+-Styling
+-Code refactor to use less state manipulation
+-Reducer
+-A lot
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
