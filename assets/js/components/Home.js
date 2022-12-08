@@ -6,16 +6,19 @@ import MarsWeather from './marsWeather/MarsWeather.js';
 import MarsRover from './Mars Rover/MarsRover';
 import logo from './React-icon.svg';
 import styles from './dash.module.css';
-
 import NasaMedia from "./nasaMedia/nasaMedia";
 import Media from "./media/media";
 import Techtransfer from "./techtransfer/techtransfer";
+import ResponsiveAppBar from "../Dash/AppBar";
+import ButtonAppBar from "../Dash/AppBar";
+
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state =
             { feature: null };
+
     }
 
     renderSwitch() {

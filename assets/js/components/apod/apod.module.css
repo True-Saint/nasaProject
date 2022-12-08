@@ -1,6 +1,6 @@
 
 .apod>img{
-    max-width: 80vw;
+
     /* max-height: 80vh; */
     width: 100%;
     height: 100%;
@@ -16,8 +16,6 @@
 }
 
 .apodPost{
-    max-height: 1200px;
-    max-width: 1200px;
     width: 100%;
     height: 100%;
     position: relative;
@@ -25,8 +23,6 @@
 }
 
 .apodImg{
-    max-width: 1200px;
-    max-height: 1200px;
     width: 100%;
     height: 100%;
 }

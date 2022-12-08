@@ -3,6 +3,7 @@ import axios from 'axios';
 import ApodComponent from './apodComponent';
 import logo from '../React-icon.svg';
 import styles from '../dash.module.css';
+import { Paper } from '@mui/material';
 
 class Apod extends Component{
 
@@ -34,9 +35,9 @@ class Apod extends Component{
         });
 
         return (
-            <div>
+            <Paper elevation={24}>
                 {map1}
-            </div>
+            </Paper>
         )
     }else {
 

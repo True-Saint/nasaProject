@@ -1,3 +1,5 @@
+import {Box, Container, Grid} from "@mui/material";
+
 'use-strict';
 import React, {Component, useRef} from 'react';
 import axios from 'axios';
@@ -10,7 +12,7 @@ import DatePicker from 'react-datepicker/dist/react-datepicker';
 import { parseISO, format } from 'date-fns';
 import "react-datepicker/dist/react-datepicker.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Modal } from '@mui/material';
 
 class MarsRover extends Component {
 
@@ -194,9 +196,11 @@ class MarsRover extends Component {
                         }
 
                     {this.state.data.length !== 0 && !this.state.loading ?
-                        <div className={mrStyles.mrOuterContainer}>
-                          {mrphotos}
-                        </div> :
+                        <Box sx={{ flexGrow: 1 }}>
+                            <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                                   {mrphotos}
+                            </Grid>
+                        </Box> :
                         <div className={styles.loadingSection}>
                             <div className={styles.loading}>
                                 <img src={logo} className={styles.spinnerLoad} alt="logo" />

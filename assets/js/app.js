@@ -19,13 +19,15 @@ import Home from './components/Home';
 import Login from './Auth/Login';
 import Dash from "./Dash/Dash";
 import { createRoot } from 'react-dom/client';
+import ElevateAppBar from "./Dash/AppBar";
+import Pages from "./Dash/pages";
 
 const container1 = document.getElementById('root');
 const container = document.getElementById('Dash');
 const root = createRoot(container1); // createRoot(container!) if you use TypeScript
-const dash = createRoot(container);
-root.render(<Home tab="home" />);
-dash.render(<Dash tab="dash" />);
+//const dash = createRoot(container);
+root.render( <React.StrictMode><ElevateAppBar tab="home" /></React.StrictMode>);
+//dash.render(<Dash tab="dash" />);
 /*
 ReactDOM.render(
     <Router><Home /></Router>, document.getElementById('root')

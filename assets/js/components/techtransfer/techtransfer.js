@@ -7,6 +7,7 @@ import logo from "../React-icon.svg";
 import DOMPurify from "dompurify";
 import techtransferData from "./techtransferData";
 import TechtranferData from "./techtransferData";
+import {Container} from "@mui/material";
 
 class Techtransfer extends Component {
     constructor(props) {
@@ -17,7 +18,8 @@ class Techtransfer extends Component {
                 results: [],
                 count: 0,
 
-            }
+            },
+            loading: true,
         };
         this.searchRef = React.createRef();
     //    this.searchRef = 'engine';
@@ -76,10 +78,13 @@ class Techtransfer extends Component {
                 link={results[10]}
                 numbers={results[12]}
             />
-)
-    })
+                )
+        })
+
+
 
         return(
+
             <main>
                 <form className={mrStyles.controls} onSubmit={this.search}>
                    <input ref={this.searchRef} type="text" defaultValue={"engine"}/>
@@ -91,10 +96,10 @@ class Techtransfer extends Component {
                     </select>
                     <button>Search</button>
                 </form>
-                {this.state.data.results.length ?
-                   <div className={ttStyles.cardContainer}>
+                {this.state.data.results.length  && !this.state.loading ?
+                   <Container maxWidth="xl">
                        {tech}
-                   </div>
+                   </Container>
                     :
                     <div className={mainStyles.loadingSection}>
                         <div className={mainStyles.loading}>

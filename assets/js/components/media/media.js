@@ -6,6 +6,7 @@ import logo from "../React-icon.svg";
 import ImageComponent from "./ImageComponent";
 import mediaStyle from "../nasaMedia/nasaMedia.module.css";
 import NasaVideosComponent from "../nasaMedia/nasaVideosComponent";
+import {Container, Paper} from "@mui/material";
 
 class Media extends Component{
 
@@ -172,17 +173,20 @@ class Media extends Component{
                   return null;
                 }else {
                     return (
-                            <div key={index+1} ref={'image'+index+1} className={styles.nasaImageContainer} id={index+1}>
+                            <Paper elevation={24} key={index+1}  className={styles.nasaImageContainer} id={index+1}>
                                 {data.links ?
+
                                     <a href={'#'} onClick={event => this.getData(index+1, data.href, data.data[0])}>
                                         <img className={styles.nasaImagePreview} src={data.links[0].href}/>
                                     </a>
+
                                     :
                                     <a href={'#'} onClick={event => this.getData(index+1, data.href, data.data[0])}>
                                         <img className={styles.nasaImagePreview} src={'/images/noImage.jpg'}/>
                                     </a>
                                 }
-                            </div>
+                            </Paper>
+
                     );
                 }
 
@@ -238,7 +242,8 @@ class Media extends Component{
                             </div>
                             {preview}
                         </div>
-                        : thumbImage }
+                        :   thumbImage
+                    }
 
 
 
